@@ -19,6 +19,10 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     }
     .logo {
         height: 60px;
@@ -118,6 +122,31 @@
         aspect-ratio: 4/3;
         background: #eee;
     }
+    .whatsapp-btn {
+        display: inline-flex;
+        align-items: center;
+        background: #25d366;
+        color: #fff;
+        border: none;
+        border-radius: 50px;
+        padding: 12px 20px;
+        font-size: 1.1em;
+        cursor: pointer;
+        font-weight: bold;
+        text-decoration: none;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+        margin-top: 18px;
+        transition: background 0.2s;
+    }
+    .whatsapp-btn:hover {
+        background: #128c7e;
+    }
+    .whatsapp-icon {
+        width: 24px;
+        height: 24px;
+        margin-right: 10px;
+        vertical-align: middle;
+    }
     footer {
         text-align: center;
         background: #6ec6ff;
@@ -213,7 +242,8 @@
     <section id="gallery" class="section">
         <h2>Gallery</h2>
         <div class="gallery">
-            <!-- Sample images generated via https://placehold.co with custom text -->
+            <!-- Linked image from GitHub Pages and sample images -->
+            <img src="istockphoto-1402700264-612x612.jpg" alt="Preschool Group Photo">
             <img src="https://placehold.co/300x225?text=Classroom+Activities&font=roboto" alt="Classroom activities">
             <img src="https://placehold.co/300x225?text=Outdoor+Play&font=roboto" alt="Outdoor play">
             <img src="https://placehold.co/300x225?text=Art+Time&font=roboto" alt="Art time">
@@ -240,6 +270,14 @@
             <button type="submit">Send Message</button>
             <span id="contactFormMsg"></span>
         </form>
+        <!-- WhatsApp Button -->
+        <a class="whatsapp-btn" href="https://wa.me/919999999999?text=Hello%20Bright%20Start%20Preschool%2C%20I%20would%20like%20to%20know%20more%20about%20your%20school." target="_blank">
+            <svg class="whatsapp-icon" viewBox="0 0 32 32">
+                <circle cx="16" cy="16" r="16" fill="#25d366"/>
+                <path d="M22.6 19.7c-.3-.2-1.6-.8-1.9-.9-.3-.1-.5-.2-.7.2s-.8.9-1 .1c-.2-.7-.7-1.1-1-1.3-.3-.2-.5-.2-.7 0-.2.2-.3.3-.6.3-.2 0-.4-.1-.7-.3-.5-.3-1.2-1.1-1.3-1.3-.1-.2-.1-.4.1-.5.2-.2.4-.6.6-.8.2-.2.1-.4 0-.6-.1-.2-.7-1.7-.9-2.3-.2-.6-.4-.6-.7-.6h-.6c-.2 0-.5.1-.8.3-.3.2-1.1 1.1-1.1 2.7s1.1 3.2 2.6 4.5c1.5 1.3 2.8 1.8 4.1 1.8.7 0 1.2-.1 1.6-.2.5-.1 1.2-.6 1.4-1.1.2-.5.2-.9.2-1.1 0-.1-.1-.1-.2-.1z" fill="#fff"/>
+            </svg>
+            Chat on WhatsApp
+        </a>
     </section>
 
     <footer>
