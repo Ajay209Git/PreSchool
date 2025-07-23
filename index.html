@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bright Start Preschool</title>
+    <style>
+    body {
+        font-family: 'Segoe UI', Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #f9f7fa;
+        color: #333;
+    }
+    header {
+        background: #6ec6ff;
+        color: #fff;
+        padding: 10px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .logo {
+        height: 60px;
+        margin-left: 20px;
+    }
+    nav ul {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+    }
+    nav ul li {
+        margin: 0 15px;
+    }
+    .nav-link {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        padding: 6px 12px;
+        border-radius: 4px;
+        transition: background 0.2s;
+    }
+    .nav-link.active, .nav-link:hover {
+        background: #0288d1;
+    }
+    .section {
+        padding: 40px 18px;
+        max-width: 900px;
+        margin: 0 auto;
+        background: #fff;
+        margin-bottom: 20px;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    h1, h2, h3 {
+        font-family: 'Comic Sans MS', cursive, sans-serif;
+        color: #0288d1;
+    }
+    .hero-img {
+        width: 100%;
+        max-width: 500px;
+        display: block;
+        margin: 24px auto 0 auto;
+        border-radius: 18px;
+    }
+    .program-cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+        margin-top: 20px;
+    }
+    .card {
+        background: #e3f2fd;
+        border-radius: 10px;
+        padding: 20px;
+        flex: 1;
+        min-width: 200px;
+        box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-top: 12px;
+    }
+    input, textarea {
+        padding: 8px;
+        border-radius: 6px;
+        border: 1px solid #cfd8dc;
+        font-size: 1em;
+    }
+    button {
+        background: #0288d1;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 8px;
+        font-size: 1em;
+        cursor: pointer;
+        font-weight: bold;
+        transition: background 0.2s;
+    }
+    button:hover {
+        background: #01579b;
+    }
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 16px;
+        margin-top: 18px;
+    }
+    .gallery img {
+        width: 100%;
+        border-radius: 10px;
+        box-shadow: 0 1px 5px rgba(0,0,0,0.06);
+    }
+    footer {
+        text-align: center;
+        background: #6ec6ff;
+        color: #fff;
+        padding: 14px 0;
+        border-top: 2px solid #0288d1;
+        margin-top: 18px;
+    }
+    @media (max-width: 700px) {
+        .program-cards {
+            flex-direction: column;
+        }
+        header {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .logo {
+            margin: 0 auto 10px auto;
+        }
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Bright Start Preschool Logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#programs" class="nav-link">Programs</a></li>
+                <li><a href="#admission" class="nav-link">Admission</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="section">
+        <h1>Welcome to Bright Start Preschool!</h1>
+        <p>Where learning is fun and every child shines!</p>
+        <img src="hero.jpg" alt="Happy kids at preschool" class="hero-img">
+    </section>
+
+    <section id="about" class="section">
+        <h2>About Us</h2>
+        <p>
+            Bright Start Preschool provides a safe, nurturing, and stimulating environment for children aged 2-5 years. Our mission is to foster curiosity, creativity, and a love of learning in every child.
+        </p>
+        <ul>
+            <li>Qualified, caring teachers</li>
+            <li>Play-based curriculum</li>
+            <li>Healthy snacks and meals</li>
+            <li>Safe indoor and outdoor play areas</li>
+        </ul>
+    </section>
+
+    <section id="programs" class="section">
+        <h2>Our Programs</h2>
+        <div class="program-cards">
+            <div class="card">
+                <h3>Playgroup (2-3 yrs)</h3>
+                <p>Introduction to social, emotional, and motor skills through fun activities and play.</p>
+            </div>
+            <div class="card">
+                <h3>Nursery (3-4 yrs)</h3>
+                <p>Focus on language development, basic math concepts, and creativity through art and music.</p>
+            </div>
+            <div class="card">
+                <h3>Kindergarten (4-5 yrs)</h3>
+                <p>Preparation for school with emphasis on reading, writing, math, and problem-solving skills.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="admission" class="section">
+        <h2>Admission</h2>
+        <form id="admissionForm">
+            <label for="childname">Child's Name:</label>
+            <input type="text" id="childname" name="childname" required>
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" min="2" max="5" required>
+            <label for="parentname">Parent's Name:</label>
+            <input type="text" id="parentname" name="parentname" required>
+            <label for="email">Parent's Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message"></textarea>
+            <button type="submit">Apply Now</button>
+            <span id="formMsg"></span>
+        </form>
+    </section>
+
+    <section id="gallery" class="section">
+        <h2>Gallery</h2>
+        <div class="gallery">
+            <img src="gallery1.jpg" alt="Classroom activities">
+            <img src="gallery2.jpg" alt="Outdoor play">
+            <img src="gallery3.jpg" alt="Art time">
+            <img src="gallery4.jpg" alt="Story time">
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>Contact Us</h2>
+        <p>
+            📞 Phone: <a href="tel:+1234567890">+1 234 567 890</a> <br>
+            📧 Email: <a href="mailto:info@brightstartpreschool.com">info@brightstartpreschool.com</a> <br>
+            📍 Address: 123 Sunshine Avenue, Happy Town, Country
+        </p>
+        <form id="contactForm">
+            <label for="contactname">Your Name:</label>
+            <input type="text" id="contactname" name="contactname" required>
+            <label for="contactemail">Your Email:</label>
+            <input type="email" id="contactemail" name="contactemail" required>
+            <label for="contactmsg">Message:</label>
+            <textarea id="contactmsg" name="contactmsg" required></textarea>
+            <button type="submit">Send Message</button>
+            <span id="contactFormMsg"></span>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Bright Start Preschool. All rights reserved.</p>
+    </footer>
+
+    <script>
+    // Smooth scroll and active nav link
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = link.getAttribute('href').slice(1);
+            document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
+            document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+            link.classList.add('active');
+        });
+    });
+
+    // Admission form validation and message
+    document.getElementById('admissionForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const name = document.getElementById('childname').value.trim();
+        const age = document.getElementById('age').value;
+        const parent = document.getElementById('parentname').value.trim();
+        const email = document.getElementById('email').value.trim();
+
+        if(name && age && parent && email) {
+            document.getElementById('formMsg').textContent = "Thank you for applying! We will contact you soon.";
+            document.getElementById('formMsg').style.color = "green";
+            this.reset();
+        } else {
+            document.getElementById('formMsg').textContent = "Please fill all required fields.";
+            document.getElementById('formMsg').style.color = "red";
+        }
+    });
+
+    // Contact form validation and message
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const name = document.getElementById('contactname').value.trim();
+        const email = document.getElementById('contactemail').value.trim();
+        const msg = document.getElementById('contactmsg').value.trim();
+
+        if(name && email && msg) {
+            document.getElementById('contactFormMsg').textContent = "Thank you for reaching out! We'll reply soon.";
+            document.getElementById('contactFormMsg').style.color = "green";
+            this.reset();
+        } else {
+            document.getElementById('contactFormMsg').textContent = "Please fill all fields.";
+            document.getElementById('contactFormMsg').style.color = "red";
+        }
+    });
+    </script>
+</body>
+</html>
